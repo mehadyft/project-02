@@ -1,16 +1,20 @@
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body
+{
     background-color: #ccc;
 }
-.container{
+.container
+{
     max-width: 900px;
     margin: 0 auto;
 }
-.apply-box{
+.apply-box
+{
     max-width: 600px;
     padding: 20px;
     background-color: #ffffff;
@@ -19,6 +23,80 @@ body{
     box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.8);
     border-radius: 10px;
 }
-.title-small{
+.title-small
+{
     font-size: 20px;
+}
+.form-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.form-control
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+label
+{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+input,
+select,
+textarea
+{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+input:focus
+{
+    outline-color: red;
+}
+input:hover,textarea:hover
+{
+    transform: scale(1.1);
+}
+#flex-end
+{
+    display: flex;
+    width: 6px auto;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
+button
+{
+    background-color: red;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s ease-in;
+}
+button:hover
+{
+    background-color: #ccc;
+    border: 2px solid red;
+    color: #000000;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.textarea-cintrol textarea
+{
+    width: 100%;
+}
+.textarea-cintrol
+{
+    grid-column: 1 /span 2;
+}
+@media (max-width:460px) 
+{
+    .textarea-cintrol
+    {
+        grid-column: 1 /span 1;
+    }
 }
